@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Presentes</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    /* TOPO COM IMAGENS */
+    .topo img {
+      width: 100%;
+      display: block;
+    }
+
+    /* CONTAINER */
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* GRID RESPONSIVO */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* CARD */
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .nome {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .valor {
+      color: green;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .pix {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #000;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- IMAGENS TOPO -->
+  <div class="topo">
+    <img src="capa.png" alt="Capa">
+    <img src="instrucoes.png" alt="Instruções">
+  </div>
+
+  <div class="container">
+    <h1>Lista de Presentes</h1>
+
+    <div class="grid">
+
+      <!-- ITEM -->
+      <div class="card">
+        <img src="img/copos.jpg" alt="">
+        <div class="nome">Jogo 6 Copos</div>
+        <div class="valor">R$ 45,99</div>
+        <div class="pix">PIX: 175.177.817-74</div>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+
+      <!-- ITEM -->
+      <div class="card">
+        <img src="img/pratos.jpg" alt="">
+        <div class="nome">Pratos de Porcelana (8 pcs)</div>
+        <div class="valor">R$ 229,00</div>
+        <div class="pix">PIX: 147.953.797-77</div>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+
+      <!-- ITEM -->
+      <div class="card">
+        <img src="img/talheres.jpg" alt="">
+        <div class="nome">Talheres de Aço Inox</div>
+        <div class="valor">R$ 39,90</div>
+        <div class="pix">PIX: 147.953.797-77</div>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+
+      <!-- ITEM -->
+      <div class="card">
+        <img src="img/banqueta.jpg" alt="">
+        <div class="nome">Kit 2 Banquetas</div>
+        <div class="valor">R$ 599,90</div>
+        <div class="pix">PIX: 147.953.797-77</div>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+
+      <!-- ITEM -->
+      <div class="card">
+        <img src="img/panelas.jpg" alt="">
+        <div class="nome">Jogo de Panelas</div>
+        <div class="valor">R$ 347,26</div>
+        <div class="pix">PIX: 147.953.797-77</div>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+
+      <!-- ITEM -->
+      <div class="card">
+        <img src="img/cama.jpg" alt="">
+        <div class="nome">Cama Box Baú Casal</div>
+        <div class="valor">R$ 918,00</div>
+        <div class="pix">PIX: 147.953.797-77</div>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
