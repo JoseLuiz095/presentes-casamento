@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Presentes</title>
 
-  <style>
+   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fbfff3cb;
     }
 
-    /* TOPO COM IMAGENS */
     .topo img {
       width: 100%;
       display: block;
     }
 
-    /* CONTAINER */
     .container {
       padding: 20px;
       max-width: 1200px;
@@ -30,14 +28,12 @@
       margin-bottom: 20px;
     }
 
-    /* GRID RESPONSIVO */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
-    /* CARD */
     .card {
       background: white;
       border-radius: 12px;
@@ -86,6 +82,14 @@
 
     .btn:hover {
       background: #444;
+    }
+
+    /* NOVO - Mensagem em verde */
+    .msg-presente {
+      color: green;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -617,6 +621,18 @@
     <img src="img/agradecimento.png" alt="agradecimento">
     
   </div>
+
+  <!-- SCRIPT AUTOMÁTICO -->
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      if (!card.querySelector('.btn')) {
+        const msg = document.createElement('div');
+        msg.className = 'msg-presente';
+        msg.innerHTML = 'Ganhado presencialmente.<br>Disponível Via PIX';
+        card.appendChild(msg);
+      }
+    });
+  </script>
 
 </body>
 </html>
