@@ -2,10 +2,12 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Presentes</title>
 
-   <style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -92,546 +94,402 @@
       margin-top: 10px;
     }
   </style>
+   
 </head>
 
 <body>
 
-  <!-- IMAGENS TOPO -->
-  <div class="topo">
-    <img src="img/capa.png" alt="Capa">
-    <img src="img/instrucoes.png" alt="Instruções">
+  <div class="container py-5">
+    <h1 class="text-center mb-5">🎁 Lista de Presentes</h1>
+
+    <div id="lista-presentes" class="row"></div>
   </div>
 
-  <div class="container">
-    <h1>Lista de Presentes</h1>
-
-    <div class="grid">
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/penteadeira.png" alt="">
-        <div class="nome">Penteadeira Ditália 4 Gavetas</div>
-        <div class="valor">R$ 445,41</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/pratorasoefundo.png" alt="">
-        <div class="nome">Kit 12 Pratos Pétala</div>
-        <div class="valor">R$ 130,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Pratos-P%C3%A9tala-Rasos-Fundos-Nadir/dp/B0GMFTWJ3D/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2P4SF5KSMOHFA&dib=eyJ2IjoiMSJ9.CwJXhhbTOaYusLYPDjIMgZb1GbBmzhTj70ygq3y4XFNqGC0YnqyRjmwy12JFxYkJUybuGGqvBXMs_PQWEndSiJ7MByicH_d1U4uoxVqeAXtLGjzjRYSQb5LKzkRox2eVaH6rBcPPo_Mx3VN6Wde8MmcFzJfA5U2GgTDGQUN18kaieszbNNyQio07DOUoSuMYBHnIOsA89z7WwdyAlDmiHPpNQRDUBuj3J6dfT3I5R32T9UiAuMsn8DYCRC2Rk8XcLv9N8a0iccV3dSiIPXd9akQadyUecw219qlsQI6Q9Mw.AP2JyMcvB8KttxT_7lRRhUew1VWPfFPupmsj4BVb6r4&dib_tag=se&keywords=prato+raso+e+fundo&qid=1778456737&sprefix=prato+raso+e+fund%2Caps%2C307&sr=8-5&ufe=app_do%3Aamzn1.fos.6a09f7ec-d911-4889-ad70-de8dd83c8a74" class="btn">Comprar</a>
-      </div>
-
-      <!-- BRINCADEIRA -->
-      <div class="card">
-        <img src="img/miojoluademel.png" alt="">
-        <div class="nome">Fundo “lua de mel sem miojo”</div>
-        <div class="valor">R$ 150,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <!-- <a href="#" class="btn">Comprar</a> -->
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/AlexaDOt.png" alt="">
-        <div class="nome">Alexa Echo Dot </div>
-        <div class="valor">R$ 379,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/dp/B09B8XVSDP?ref=cm_sw_r_cso_wa_apan_dp_ZNE2HDJHHYT3NCN9YY2S&ref_=cm_sw_r_cso_wa_apan_dp_ZNE2HDJHHYT3NCN9YY2S&social_share=cm_sw_r_cso_wa_apan_dp_ZNE2HDJHHYT3NCN9YY2S&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/banqueta.png" alt="">
-        <div class="nome">Kit 2 Banquetas</div>
-        <div class="valor">R$ 599,90</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/panelas.png" alt="">
-        <div class="nome">Jogo de Panelas</div>
-        <div class="valor">R$ 347,26</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Brinox-Panelas-Antiaderente-Ceramic-Indu%C3%A7%C3%A3o/dp/B0DDZJ18T2/ref=sr_1_4?crid=3H750I8LQASXN&dib=eyJ2IjoiMSJ9.Kp7Vr7AJ8OhBFZPERsQG5gEibtg48QyQNyX7eThZXJHj_We5-1QGeofZKLoNCdK_Y73m8Q6o8Ch8DO27BweSGglyyIY5a0rd86DtdV64Kc51iFWCM0-8cn8k1AcH201h4-46j5htj_z2gp4m2JdacE1CFvSIIbGbKS2-CuAAbtyzhdjT2Jd6JcBnni-ELdMixfOrD9SPt9DCKN-X9VaNy8xE7eWeybCB0bohbGrIMu0.9XvfjnvNmfG0CQpbVW3r73miT9FC939VhuOuh6qTyuU&dib_tag=se&keywords=jogo+de+panela+ceramica&qid=1777681576&s=kitchen&sprefix=jogo+de+panela+%2Ckitchen%2C204&sr=1-4&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678" class="btn">Comprar</a>
-      </div>
-
-      <!-- BRINCADEIRA -->
-      <div class="card">
-        <img src="img/Penteadodanoiva.png" alt="">
-        <div class="nome">Penteado da noiva</div>
-        <div class="valor">R$ 539,99</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <!-- <a href="#" class="btn">Comprar</a> -->
-      </div>
-
-      <!-- BRINCADEIRA -->
-      <div class="card">
-        <img src="img/ReservaTPMdanoiva.png" alt="">
-        <div class="nome">Reserva de emergência para TPM da noiva</div>
-        <div class="valor">R$ 200,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <!-- <a href="#" class="btn">Comprar</a> -->
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/camabau.png" alt="">
-        <div class="nome">Cama Box Baú Casal</div>
-        <div class="valor">R$ 918,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-      
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/forma.png" alt="">
-        <div class="nome">Assadeiras de Alumínio</div>
-        <div class="valor">R$ 156,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Assadeiras-Alum%C3%ADnio-Revestimento-Antiaderente-Tramontina/dp/B008R7SQ40/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3DSPG0M9XVCRL&dib=eyJ2IjoiMSJ9.UlRVe5cn1xJV-EUNqagE4OSIt2nTkSA9KkgU_-e1sEUFNavxVaB6WPQP-_jj9N1KVP2CoXywFjoBX_2PeaVoK1qha4z4nX8eTtu8IdTS-lxDBhkalUMKmoHR2L99oCsSJR3aaWLOaOUuz5lIoN8iPVzaMFTPOuwcKCiHYZxCYTC61hQkLt12KL9sNnHKObxrFy_9BhLfjF-i-UtaJ05zGyVZdzQqJBEnKoQr853n1FI.0S6PnRxujIZrUSAxxBxJmp73dqNWf_qIDEXZHcUsn_8&dib_tag=se&keywords=Assadeira&qid=1777683706&s=kitchen&sprefix=assadeira%2Ckitchen%2C234&sr=1-4&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/RopeiroEliza.png" alt="">
-        <div class="nome">Roupeiro Eliza Cinamono ACP</div>
-        <div class="valor">R$ 1820,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <!-- <a href="#" class="btn">Comprar</a> -->
-      </div>
-
-      <!-- BRINCADEIRA -->
-      <div class="card">
-        <img src="img/Primeirogás.png" alt="">
-        <div class="nome">Primeiro gás da casa nova</div>
-        <div class="valor">R$ 130,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <!-- <a href="#" class="btn">Comprar</a> -->
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/panodeprato.png" alt="">
-        <div class="nome">Pano de Prato</div>
-        <div class="valor">R$ 91,90</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://shopee.com.br/product/1309294075/22498289182?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkWHlFU0hvQlZFVENpb1FnT09uNDlDS3pXUVN4ZkgrdkhaTE5lek8zWlozcmptZEc3OXhWU3ZLUlRlekc2YUp1Ymd1TWJINmZRbllLZTR2TEI5MEpMbWFJcTF4MXhQMWNiVUdQT3NIMTF2QlBlMXBDbjRmOGFYZjM5dG9YanNCNTF3PT0&gad_source=4&gad_campaignid=20828771740&gbraid=0AAAAACoEtRkAChy6Kf8KKK9ysV4XNOlzy&gclid=Cj0KCQjwo63HBhCKARIsAHOHV_UIA__79eLehwUk4Od4K0Ifo3VY6C_9I_F1_haOYX4dSK9GScB5f9QaAn_TEALw_wcB" class="btn">Comprar</a>
-      </div>
-
-      
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/lixeira.png" alt="">
-        <div class="nome">Lixeira 60L Preta</div>
-        <div class="valor">R$ 109,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/LIXEIRA-60LTS-PRETA-PEDAL-CLICK/dp/B09YDLC69D/ref=sr_1_34?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2PET2WLX4A88P&dib=eyJ2IjoiMSJ9.TAhHQJ6dcky070P8CSE4evLHyi1Iyno8mZct-3yUH-8y9el4urgzb9b1Ov3qRsKBQhYiNhdIphxnjYQwEg6C2kQY6Mx86DsEVjpYtx1jK-RXj0X83Dw2av4uc4Aismd1kNHj30b5b7cW8eL_HBWcgQA6G7fHqQt7bl7F6iZP256n8rK6nr6l9OvJzJ7BXjNa1okU9ZEoVynQw5M5qvsOtEVKf08C1qImNgaO6QmEh8Hq7544-_ex2aHO9i19C5XdLSTautBgk0yBilMTB910QNr8Ijep9aXhKEf2ZifeoOM.lC8Tby1V4G75jReDFxkERqayLD7C9_VvxU0nGSEwgCw&dib_tag=se&keywords=lixeira&qid=1777684737&sprefix=lixeira%2Caps%2C209&sr=8-34&ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/churrasqueiragas.png" alt="">
-        <div class="nome">Churrasqueira a Gas</div>
-        <div class="valor">R$ 1034,10</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/dp/B077JCW4BQ?ref=cm_sw_r_cso_wa_apan_dp_JQ8WK9D61FJ8FH1461GP&ref_=cm_sw_r_cso_wa_apan_dp_JQ8WK9D61FJ8FH1461GP&social_share=cm_sw_r_cso_wa_apan_dp_JQ8WK9D61FJ8FH1461GP" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/SANDUICHEIRAGRILL.png" alt="">
-        <div class="nome">Britânia SANDUICHEIRA E GRILL</div>
-        <div class="valor">R$ 109,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/Sofá2Lugares.png" alt="">
-        <div class="nome">Sofá 2 Lugares Reclinável</div>
-        <div class="valor">R$ 979,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/Edredom.png" alt="">
-        <div class="nome">Edredom Duplo Bege</div>
-        <div class="valor">R$ 229,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Edredom-Ecopluma-Toque-Branco-Camesa/dp/B0D51K3RV1/ref=sr_1_5?crid=2YTK082JEXRTI&dib=eyJ2IjoiMSJ9.NN23ywN-6g7m5vaisnT1R4GgT9Lv0UZ79VEHS6yr0zNn5nZ5VFSpaamEdC4ex5pyaTFlpO8JRMNKbI46yy8kUPfEqSRBfjKZ6rkLom2mOFa9GydcOWmwqrvhUgDuNcG9G9HAl1jQL6a7vIKLbx_Bn6hk1_IRFS-KAO5uFv21l_gMkYgNRec-xxRmnVozhZdDiJtt02ZvPU_p_8ylWvttfWEO1cC7lO3NZOE_M5cGi0fI8_AJSBXbecaJCwpGyqQpF73djal_SaTBFY9y6RSdVYhAfHajeQHzt0l8U9weI1E.yn4Vt0v3Q4OqPsncbPcKh0tztopnSDlQ3zTujWVdrx4&dib_tag=se&keywords=edredom%2Bcasal&qid=1778027547&sprefix=edredom%2Caps%2C312&sr=8-5&ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e&th=1" class="btn">Comprar</a>
-      </div>
-
-      
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/RopeiroLorena.png" alt="">
-        <div class="nome">Roupeiro Lorena  Cinamono ACP</div>
-        <div class="valor">R$ 1200,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <!-- <a href="#" class="btn">Comprar</a> -->
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/JogoToalhadeBanho.png" alt="">
-        <div class="nome">Jogo Toalha de Banho</div>
-        <div class="valor">R$ 99,90</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://shopee.com.br/Jogo-Toalha-de-Banho-4-Pe%C3%A7as-100-Algod%C3%A3o-Grossa-Felpuda-Super-Macia-Excelente-Absor%C3%A7%C3%A3o-New-Premier-Habitat-i.322387387.19399663917?sp_atk=f0f2de47-984c-4912-8486-2206076aa92c&xptdk=f0f2de47-984c-4912-8486-2206076aa92c" class="btn">Comprar</a>
-      </div>
-
-      <!-- BRINCADEIRA -->
-      <div class="card">
-        <img src="img/Sparelaxante.png" alt="">
-        <div class="nome">Spa relaxante pré-casamento</div>
-        <div class="valor">R$ 639,90</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <!-- <a href="#" class="btn">Comprar</a> -->
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/Sofá3lugares.png" alt="">
-        <div class="nome">Sofá 3 Lugares Retrátil</div>
-        <div class="valor">R$ 1311,28</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-
-      
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/TvTCL55.png" alt="">
-        <div class="nome">Smart TV TCL 55 Polegadas</div>
-        <div class="valor">R$ 2319,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        
-      </div>
-      
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/6CadeirasAllegra.png" alt="">
-        <div class="nome"> 6 Cadeiras Allegra</div>
-        <div class="valor">R$ 473,55</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://shopee.com.br/Kit-6-Cadeiras-Allegra-Jantar-Restaurante-Bar-Igreja-Area-Gourmet-Super-Refor%C3%A7ada-Premium-i.391672269.58257882564?extraParams=%7B%22display_model_id%22%3A189187609213%2C%22model_selection_logic%22%3A3%7D&sp_atk=5988fe16-0d94-404c-b68d-8333d622d63f&xptdk=5988fe16-0d94-404c-b68d-8333d622d63f" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/GeladeiraElectrolux.png" alt="">
-        <div class="nome">Geladeira Electrolux 400l</div>
-        <div class="valor">R$ 4079,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/FogãoDako.png" alt="">
-        <div class="nome">Fogão 5 bocas Dako</div>
-        <div class="valor">R$ 1729,90</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/ArCondicionadoElgin.png" alt="">
-        <div class="nome">Ar Condicionado Split Elgin</div>
-        <div class="valor">R$ 2755,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Condicionado-Split-Elgin-Inverter-45HJFI18C2WC/dp/B0DJ9TBJW2/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2NPGKHMYTMIZL&dib=eyJ2IjoiMSJ9.RZJeXysIRnvuad59OfaAFiow7OyY4L5EA2Eh_eddTdQCIuUsMkYezTQfBhtJwo8H_McOSbtL3qZLIWw7n1NufHzyTsJyv6EVHbrETLvoisraBpcxHxH7b8xbgmMk2D-Vc9y7Rs3-RDYZgR8uq13EzUt9qfHEj_ajIzggNdXbX_UPMKyDBtxFiFFjCGIuBua8PnxZZrXKf8g7vZ-n96EIJNhfQ-1M_fXQ2EQhJs8Nf1qDh7rnL4kUFZ_78dWD8oODTPz19ZVy8UybF3x68BeEJ4V_ZiIqM6LKsLEUyAOvRd0.6UvOkQeoupQJlxgVzTEpYQFx1e1d2UAStSRbpZkTYV0&dib_tag=se&keywords=ar+condicionado+18000+btus+inverter+elgin&qid=1778102894&sprefix=ar+condicionado+18000+btus+inverter+elgi%2Caps%2C298&sr=8-5&ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751" class="btn">Comprar</a>
-      </div>
-
-      <!-- BRINCADEIRA -->
-      <div class="card">
-        <img src="img/Maquiagemdanoiva.png" alt="">
-        <div class="nome">Maquiagem da noiva</div>
-        <div class="valor">R$ 549,90</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <!-- <a href="#" class="btn">Comprar</a> -->
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/Micro-ondas33LPhilco.png" alt="">
-        <div class="nome">Micro-ondas 33L Philco</div>
-        <div class="valor">R$ 652,54</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Micro-ondas-Philco-PMO38S-Limpa-F%C3%A1cil/dp/B0D3N6ZHS1/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=C7YUBZHN5K4W&dib=eyJ2IjoiMSJ9.gwmsn2CtVzMqcVzf0lymoP3LB5YIoTV2ccuwtCaGOBl8HkP3wk853IIog9Y-nKMi7wf3HXRpIs56VkLbstgSbIu-GMjZ7zUX0bE1Nq15CJvLcNFLKcJvLj7cYRZXDqVU7nLpFUDQOmTz22qKRz3nKAo10c3A3C40TrjlNrku6rLTHEU6bBBuaw9RJnWgjDRO54fNsfTCid18WsRoX6ETHhlRAD2Yoy-2rTyrD4kJh8sYp7dMCbRU1khrqoumVcjEVUTmQXPTmNQ6uThbUA9v3AZUWYj0XFmuD4Y_Vc0KeMw.ZDyG454XjDFsyTGAHa9FWtBX9DDr3ey_PCTat16wUwE&dib_tag=se&keywords=micro-ondas+%28philco+pmo34eb%29&qid=1760792373&sprefix=micro-ondas+philco+pmo34eb+%2Caps%2C207&sr=8-2&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/MáquinadeLavarElectrolux.png" alt="">
-        <div class="nome">Máquina de Lavar Electrolux 127v</div>
-        <div class="valor">R$ 1850,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Lavadora-Electrolux-LED13-Essential-Filter/dp/B09B7X4JSZ/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=UDDYHUF3UPKD&dib=eyJ2IjoiMSJ9.6UC7UDQhjW356GkweLSZKDSJ3S-sxcb5Mbh8ot7WOVbwtN6CdTQUX9UEzVL2v5aliUXmaA6vfz0u0foR81DyRiKdTL8BVdOUVvUoXK6XIUttQmzQ1OmpYUr5bI5SYS2xTiJH7VkxtSeDoadPlAJh806Vrp8w9c4fZN-dQ-j6-no7ADSEiR2rXfD64MY4Tvk7sRGFBWXYwcI-507cL4LTEO9BB0XcMAAf7NQ2yoG6WUxIVpEvGJORycgi8_GhPtMQuMLYBhdJ4VIlJ6L8F8_h0BID1z4Ez3TnwZmILynyKSI.hCpYyvqXHwQF6s3iLSXBgFbZBiZw1gZqGB6IVEn5rws&dib_tag=se&keywords=m%C3%A1quina%2Bde%2Blavar%2Broupa%2Belectrolux%2Blac12)&qid=1760792564&sprefix=m%C3%A1quina%2Bde%2Blavar%2Broupa%2Belectrolux%2Blac12%2B%2Caps%2C266&sr=8-5&ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751&th=1" class="btn">Comprar</a>
-      </div>
-      
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/FacasGrandes.png" alt="">
-        <div class="nome">Conjunto de 5 Facas Grandes</div>
-        <div class="valor">R$ 105,21</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Conjunto-Faqueiro-Completo-Inoxid%C3%A1vel-LUMAI/dp/B0CT66PRNC/ref=sr_1_10?crid=2KV0LE8SNBQRS&dib=eyJ2IjoiMSJ9.azJmO6ZzooTNGuiwtGzzxolAue0pf7vQcf8KN63sB5ACNrW3VFfBtWmIUkfngnGpDkmTao6Ldz0HmPqLBBJEwCQOmynJd_h-Tf8v4u2H3DxhYGbhI0Hmo4JWL6kvXSGb2fifLqOEV_DXrdQntkhwbmGeSdNJmnBsdd139TmhLbTJKT-_e71aM5X-ON3Pr9G2v7O7LeYYJkzhcWLiVirAfr3Xt5E_5_Tw8JV_GZtFYAswbEPShal295xVD_9Le218qAQvoLlV1e9koDjlo_sz27JGsoCrr-OZXzZt95zUCUY.QF7dQnXpLYhV_4eMQA3LPilH3h9uriEkP4bCvT-ZEYA&dib_tag=se&keywords=kit%2Bde%2Bfacas&qid=1778284933&sprefix=kit%2Bde%2Bfaca%2Caps%2C237&sr=8-10&ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/Airfryermondial.png" alt="">
-        <div class="nome"> Air Fryer MONDIAL 12L 110v</div>
-        <div class="valor">R$ 519,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Fritadeira-Fryer-Forno-Litros-Mondial/dp/B0BZJDLT6Z/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1NWQXX26YT5UX&dib=eyJ2IjoiMSJ9.lqUHs3ZhjquNVlUg6BYl0rNLi5N92SD_1CXmdacS_sHTN_1pX4X8RtfyCkOJozESKcOC-GvpZH5K2pwC7lWgd7d6Brr5Tn5RyBBPaerQ-FnMuZe2d3g9tiQsVvmm4gU-wbC68E2W0KYfMyPXK5-9BN9m8ojFb4lqei1AQRpLQpGaUpH0aGvrJZksWFTyqiY7vK__dFuYSPx_1B8srXnP3QAYhmS_gq4b9NFxGNcXOOKgNp2n2Zal-HwCdEX33wMrVtmZQk11V-m5KmBWoLQxEqtZmxL1DpoCgF9N4f9Hnls.QHpVQmxwDeT_JhVbHZcTrRmUcpXFhkYRBYCCPYngB34&dib_tag=se&keywords=Air+Fryer+Mondial+Forno+Oven+AFON-12L&qid=1778103396&sprefix=air+fryer+mondial+forno+oven+afon-12l%2Caps%2C203&sr=8-5&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/MONDIALPassadeiraaVapor.png" alt="">
-        <div class="nome">Passadeira a Vapor MONDIAL 110v</div>
-        <div class="valor">R$ 150,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Passadeira-Vapor-Port%C3%A1til-Mondial-Branco/dp/B0C59NLPC2/ref=sr_1_13?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3Q55IAC6QHRG5&dib=eyJ2IjoiMSJ9.nf-GGur0MfF5oysc8bqXrTJsDttLPZT8YgvYy6Gdg_e3PMGFZHCSdx-d0I_X7CerJXKaY_JXJp3mLFildjJsUksDbF0dy5QUsR69-0Tsc2ahJgHm9Kx3X34cdC9RRzJ8lKpmiSS8acw2Frh_g88wOYfLQlwXHIfUzdQKn99bVXcjRjEg8hNPqlK31J2-WSHGpAaU1Pfb66Xdz1FkIMThxnKq_BISAYSUVNcV6yYmUpN2Z6lx8tPuxhO6ZtsyiDiP3OdHfaar9Rso43UDD-rGPcLomqD2etrcg2VYqMxlS24.eCrRKl2NDOJI3r5HssPpqEolYBwDD0j72h4w43P7mlg&dib_tag=se&keywords=ferro%2Bde%2Bpassar%2Bvapor&qid=1760792996&sprefix=ferro%2Bde%2Bpassar%2Bvapor%2Caps%2C205&sr=8-13&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/RobôAspiradorKaBuM.png" alt="">
-        <div class="nome">Robô Aspirador KaBuM</div>
-        <div class="valor">R$ 2250,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Smart-900-Recipiente-dispensador-Autolimpante/dp/B0D79KVHFM/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=109VTVROSLI16&dib=eyJ2IjoiMSJ9.z6SM5yxmez_XrjtlqOMoxxuaPP2Q7fcOYWKwTcVD_v1ZRvS6mWepZmKe7fMV9RVu4TgiLZqkOnetxfTSpY_XgiChIkJyuL1VZaO05057lDpLYrX7QgT6Mgsa3mTEuU92-OmO5zyzRL3v36NdwY4Xiu8T0XKWunnk1BbCmgHgWT26lJxjiQ3YmmP_WwNQFCietygv7TLCVteel4GlZ_WtoR1gdjcXSYF8dY_uap5iAaE2ZyDVC1fWfxbhD4BPQiEN_RH8CN-jedzI1Cx0hGQjd5KZRkOU5f2-QuQ6caYVQkg.DuwUpVxW0wymHqX7-qoZcTvzcNngh_e5HZKJHmiYHZA&dib_tag=se&keywords=robo%2Baspirador%2Bkabum&qid=1778103752&sprefix=robo%2Baspirador%2Bkabum%2Caps%2C236&sr=8-5&ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/BatedeiraPlanetáriaOster.png" alt="">
-        <div class="nome">Batedeira Planetária Oster</div>
-        <div class="valor">R$ 407,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Batedeira-Planet%C3%A1ria-Oster-Bowl-OBAT641/dp/B0C4CF2F67/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2TTLI6HIVCD9M&dib=eyJ2IjoiMSJ9.u8gEv6KJ4QCLPJRqApkxR79hOremsKWf9StuDarcHLtn0VCPPnWIGY2dyDgbzrd5y0oO_jEbXfdqe-TaVD08H4eJ-5GX-WhbSredxqoBKCEcSqGAhBZKiE3VnPi1do-XBOp3RInEK_MVE6FEu_I1DY_Ur9cELj_Jr4yZXmTSwyIDpWaRWCxscZX2TuIGkaYVY-ELTRqOm-qdvDXx7s9gojYCxlFUcZxefoTf_wNwkKnN0hOLLc-QqHDmjht1P-4DAELSagTgeYWJodW0x2b20Ijd901MNN1PgrxmpwDWYpM.EJoXXqy8I26467Bet7pDGJmTmcNl90BhNSP3kleW3vM&dib_tag=se&keywords=Batedeira%2BPlanet%C3%A1ria%2BOster&qid=1778103888&sprefix=batedeira%2Bplanet%C3%A1ria%2Boster%2B%2Caps%2C220&sr=8-5&ufe=app_do%3Aamzn1.fos.9e6a115c-05b9-4b96-8e1c-b1f9ce2ac1a6&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/MultiprocessadorPhilco.png" alt="">
-        <div class="nome">Multiprocessador Philco 127V</div>
-        <div class="valor">R$ 309,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Multiprocessador-Pmp1600p-1400w-101201001-Philco/dp/B07QN1RW8K/ref=sr_1_10?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=38ZN317B9UZI4&dib=eyJ2IjoiMSJ9.-2sCNhlv9cssfLXYRuLw8E97sxIGitfJwzf-V1nQh_fQtjvB9PzrIuwRESuq56gv1XNsZJQ2lN72-eUKw7G51sc1AZdAzVGO8VW6TYD7SOk_jthuL0RxHp86-BLFOObXttnm4bdzfSuKyH9uC-ZFQ1cEwLO8tr-pBfTAc4B_qJg-7hUhK-Cuodh-wnQ6ywON_0kbCU069ifUV95JHK6nPwVuKDW2JuHm9paOoXYmcAwjF-M7X7TE5bFpEVIUp5RNVX3qBjy9sXI5XfDxQ8TUskflH6WqX-X8ZzDmBDewUZE.UsNIXTGfUJL4YrL7vCE4HVkYR_yWzynfMDeGXCrNkI0&dib_tag=se&keywords=processador&qid=1778284657&sprefix=processado%2Caps%2C294&sr=8-10&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/jogodecama.png" alt="">
-        <div class="nome">Jogo de Cama Casal</div>
-        <div class="valor">R$ 94,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Percal-Palito-Anti%C3%A1caro-N%C3%A3o-bolinha/dp/B0CVQX2DR8/ref=cs_sr_dp_2?crid=210ELACUQV25J&dib=eyJ2IjoiMSJ9.uVH2VvKtSREUwkHqI3xoZXzzrLlQ8QBzjPwKeAxTQGMCsuBbY3pg9Of3Dnj5lZN1ho_kdH2CT5BwSFxXuWhUgS5QzXdDtpp0fY4Sc4l7vWUYozU6Gx0zuES6dcecUwI59KNOCWt7XcokzUtghpt1FV1qQ22Whfj7ROCfYDB6gShHiwkqSlUF79g4nocZk0ZA5ah7eAVYi1AlRxTxSUWJ6jD4xMz81SOUwuZSXaJeOAFxcW0NLOSouY1fe9RyAzs_5tm_itkRmHsZeCor0OOOepXv0XLAyjwHviYHFYGbA9w.GBjKl1-BtiJAE7oa6qVGJv7jZsu8raJw4ABy_VrLlUM&dib_tag=se&keywords=roupa%2Bde%2Bcamacasal&qid=1778285166&sprefix=roupa%2Bde%2Bcamacas%2Caps%2C271&sr=8-15&ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/MopGiratório.png" alt="">
-        <div class="nome">Mop Giratório Inox</div>
-        <div class="valor">R$ 169,90</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Perfect-Pro-Girat%C3%B3rio-Move-Cinza/dp/B089KSY62M/ref=sr_1_14?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1JQTT5SCTAZH9&dib=eyJ2IjoiMSJ9.MpPxsHlxUZ5PHT2PaVAoDzJfMLmXJQNOjurot654KEgeK09CIuE25r8vkwsGR27YECSM85I24H_yhrOjaywqwxIdQGaqxpeioSjjHMzxzwvU0QLxvQy1bar7HYMjmvDPbw7INaKjtX3i53cQX_6Yk-6vfjlUa7W1WhymFrMIBK147S3ZmKF_F8BbKFWf2-RpLHMFBawcIdL6fVAWvToRUANqIGW5kGgC2jAnP5bQ1_zpzgm9VeMTEIMekRmA5X7kS0wmPGLZ8v_DMaILXaOlbewptPBxo-fQIJoaw3lhX0U.sOnpvu6zJbJEVrPEfobL2OW1svCmNJCoQXvPcAv2jXk&dib_tag=se&keywords=esfreg%C3%A3o&qid=1778285459&sprefix=esfreg%C3%A3%2Caps%2C242&sr=8-14&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/PotesVidro.png" alt="">
-        <div class="nome">Conjunto 10 Potes Vidro 640ml</div>
-        <div class="valor">R$ 108,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Potes-Vidro-Herm%C3%A9tico-Marmita-Microondas/dp/B07QJXQHQ3/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1QDX0M8G77LQ2&dib=eyJ2IjoiMSJ9.2bA5X_6apEDPQgDDGcQPXZ6NxPB76-rcq_zIKgde7_gD5SaGnvPHnxqzXCTBFOZ_Hql32L1MWjvpobFG878_97hOkOvaULl-pLizKvAQaI4mplDpcb3SaOqgwqonETZGsOaGI88nSuDBJJuVC-c32BiWT_g69kPYS7XLk2Vc-FNdWO02EDFM4dsm_eqbAHm7x82syNotXNAHIO0Dm2wKdiQzCVk50FkdDQ3UGAT6Dw--8EazzhnfBcEbyoYGnjl_5Yu0_RzvsvV2E0zCWc_lGwiw9TR_lua7f92vDSHYP_s.ytWAAj18Y5UBRCaj_PkBuPp91YWraFiWso8-9GANifc&dib_tag=se&keywords=kit+marmita+de+vidro+10&qid=1778285842&sprefix=kit+marmita+de+vidro+1%2Caps%2C297&sr=8-5" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/PotesVidro320ml.png" alt="">
-        <div class="nome">Conjunto 10 Potes Vidro 320ml</div>
-        <div class="valor">R$ 102,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Potes-Vidro-Herm%C3%A9tica-Quadrado-Marmita/dp/B07QL3F7CB/ref=sr_1_9?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1YXWIMY11BGLK&dib=eyJ2IjoiMSJ9.8UiQ4OgTiJtK2YkG0wvsMbWKpmCEX1q0H4wI-lDJdftpguFWIL8hyhDZbelZHwyP0y6Clps4slLJqg86O1f7gKibTxxyfgpK0Q4u18leqrHSJRlsVF9q7FZllvlZv4Pt8d5eZWNu3YIwNduesezHdIjRodoiCcbkdu8M0e05lDmHfLVzSEwtwDuexEibORxclbaDpBNzPLbwtnmgDKWC2kl0U8Pb7kxwmlPUrIKphGnx6qLMq1p6yjc4JbvGwMtsuJVsF0UQjCZs_eFZ2LMbxcCBBZlWNutiXBBTETyvloE.Q322WUtxxPDilolBexARk43utluO1XpTDI_gvauZokY&dib_tag=se&keywords=kit+marmita+de+vidro+10+320ml&qid=1778285966&sprefix=kit+marmita+de+vidro+10+320ml%2Caps%2C282&sr=8-9&ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/EscorredoresdeLouça.png" alt="">
-        <div class="nome">Escorredores de Louça</div>
-        <div class="valor">R$ 135,40</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Escorredor-Autom%C3%A1tica-Antiferrugem-Antiderrapante-KLEMING/dp/B0DF4JWYYR/ref=sxin_13_pa_sp_search_thematic_sspa?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.31f7e9c0-6409-440c-8b4f-5a95ecd40cab%3Aamzn1.sym.31f7e9c0-6409-440c-8b4f-5a95ecd40cab&crid=2H74ECIFCMOUN&cv_ct_cx=secador+de+prato&keywords=secador+de+prato&pd_rd_i=B0DF4JWYYR&pd_rd_r=e9c6f626-73b0-41ff-8c43-638e0388cc53&pd_rd_w=8wVQE&pd_rd_wg=rK2Yt&pf_rd_p=31f7e9c0-6409-440c-8b4f-5a95ecd40cab&pf_rd_r=XS6JXKQ5TE5MMT0QFEDR&qid=1778286319&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=secador+de+prat%2Caps%2C222&sr=1-1-fc613efb-89a5-4ecc-a266-4feb7aba5db9-spons&ufe=app_do%3Aamzn1.fos.6a09f7ec-d911-4889-ad70-de8dd83c8a74&aref=j7pjLaKgdy&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&psc=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/PurificadorÁguaGelada.png" alt="">
-        <div class="nome">Purificador de Água Gelada Cinza</div>
-        <div class="valor">R$ 615,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Purificador-Electrolux-Compacto-Cinza-Bivolt/dp/B08X66RQ48/ref=sr_1_3?crid=38KUZ3LBDBKCA&dib=eyJ2IjoiMSJ9.7AMgzX-gKu8YLjer3uchb5hpTUDCkg1Y3oc9A22DMSCmhLQn4l0HsaqoFXYK1hHtfZFy1g_uZNPb2gJ0BzWBTT8yRRIaXPOBdE7lHkpTz48Pa80JrkhKQ8ESFyjpVxhWspOcXjD0VNsI05oauID2XPsmXWhw3BVq8AtbgfLihnaEQ0GA8pPjHCr59dNat5HHxSzpScY9ABhw94kWAvTLFXdFygrYXlg8s3TPTfqWcXg.xMyvvDPYAemh5D8FabCRF1CdyOQ5t7owKFXjaMrt-gE&dib_tag=se&keywords=filtro%2Bde%2Bagua&qid=1778286490&s=kitchen&sprefix=filtro%2Bde%2Ckitchen%2C216&sr=1-3&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/kitutensilio.png" alt="">
-        <div class="nome">Kit De Utensílios De Cozinha</div>
-        <div class="valor">R$ 120,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Conjunto-Utens%C3%ADlios-Cozinha-Pe%C3%A7as-Silicone/dp/B07W3XTM9Y/ref=sr_1_6?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=10F3KL286AE8H&dib=eyJ2IjoiMSJ9.QYpeLchEaw9j00aMLF2jL-v-93G6VcpnsOKOkZTNN-YTOs6Fd6eUwFoeouv3ItFnkVZwGn7qHhahD1VTloN1Ko7mKExI-vAN6ZHe3WQ-vPXLUQjzbeZQ6W59g0qGT2yb4jHWzZmuaB1Hf7B9T-Ge_9JIoA_Cg9M06T0Rqkg9uMtiAbQ4JdbuwgLzid0SooL-9jr9TKzI2Oattm4NKyqKgXch9MKLbaYjDpc1lZfDZmNBkPls-mWQ8t5GH-554QfoogWv1EPUUryttlBbH84ZaoIc3Fq_ltKgZ9OZ0mMQBPY.KPUztWKZBrkoKD_H5iUs5EqNso3g7ewBR16wG1SlYJs&dib_tag=se&keywords=kit+utens%C3%ADlios+de+cozinha+de+silicone&qid=1760793752&sprefix=kit+utens%C3%ADlios+de+cozinha+de+silicone+%2Caps%2C396&sr=8-6&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/PIPOQUEIRA.png" alt="">
-        <div class="nome">PIPOQUEIRA 20CM</div>
-        <div class="valor">R$ 114,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Tramontina-PIPOQUEIRA-20CM-LORETO-VERMELHO/dp/B09W4CSX53/ref=sr_1_7?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=XEI28ZMZ5HMJ&dib=eyJ2IjoiMSJ9.YF9gDLRES1Xgbuwicsn9wS3AyQmnnCGnKk2a1k-2twthZLshJQG7DLBiDWTVCVggGjzi9GKNds-6utOQBhGcE_tBdS2GbWl8ra_AWOVZj4bPp_18xhpB74Ekl8o6UhLnY5mTUvQ92udIbnOzdrke9hZOLT4oUxp7xF8p7Mt5oc_-rTjuM4vo9GwbgIPaFfqQh9SGz4WavlLXHun3l4S3Dd61WPttqVyvLpNYhbIdkHtbrQzYoECkBno2f2nfUDou_EbGu8r0pKH6zJfaYhIZNKCRaD2YdN1f97PHc_lgHt4.sSXTmIMFnRKHdcieuxKb3_wA6DGzyZlS_AdU39Yc92g&dib_tag=se&keywords=pipoqueira&qid=1778287067&sprefix=pipoquer%2Caps%2C293&sr=8-7&ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d&th=1" class="btn">Comprar</a>
-      </div>
-
-      <
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/CAFETEIRA.png" alt="">
-        <div class="nome">Cafeteira Elétrica Electrolux</div>
-        <div class="valor">R$ 219,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Cafeteira-Electrolux-Program%C3%A1vel-Experience-ECM25/dp/B09SVPDX3G/ref=sr_1_3?crid=39SBK06FSWY33&dib=eyJ2IjoiMSJ9.Fijf6z4gh4MWEUdspKz1kgkIaMrVtyorD2kq2Cqzsm_Rov0OEjFy5lU_BTp_v0pSt78F89KGkPc_l1x2s5m2ziqjsz1sb_W2AUVP7FiDI7WfhS-xJ6-0p2DLhN4TTHAqAEmFNmuW_bHehBoNRoVoLO6PMQD9jH8UwypAhOGx9MWSk_DtBFMM2M90NJoNxKFcv_VQOLIIy82rSconAJgh4CXMZJI8gQaNFmVoSzkDWhw.qVBfg5lNktYwkvRGZM-OFZ9p_72OsdGtiYX8n8X75AY&dib_tag=se&keywords=cafeteira%2Beletrica%2Bprogramavel&qid=1778288902&s=kitchen&sprefix=cafeteira%2Beletrica%2Ckitchen%2C208&sr=1-3&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/PANIFICADORA.png" alt="">
-        <div class="nome">Panificadora Britânia</div>
-        <div class="valor">R$ 534,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Panificadora-Multipane-Britnia-64301014-Preto/dp/B076XWM3RH/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=AXZJXEBTF5CN&dib=eyJ2IjoiMSJ9.bCSQG1I7eT1Ya6uBH-eFWEcGBk_b_hTbVqhLL5Riurz5dEEj3RcR6CaOgN2uSl-feN6YHzZL3y6a_KcmS3I6MueRG9U__kl-Y9WhzFnnVvSOUd2gNcxnJ0ebFhKynPbuY3pfP1qiHf-lB2KzOflY73Dl6ti0iN2ATZt5uooMcsj8pF8lUfwc5P32AA9tkFJ9KxMcqFKl7kwbUX8-mvFNgN5YtbaoLMk4WvYMxaRVY5w.2CsFt1MhuKolBj0kkoSID7Am7wYTJoCAAhmKcIVRXMI&dib_tag=se&keywords=panificadora+programavel&qid=1778288938&s=kitchen&sprefix=panificador+programavel%2Ckitchen%2C200&sr=1-1&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/VentiladorColuna.png" alt="">
-        <div class="nome">Ventilador de Coluna Wap 127V</div>
-        <div class="valor">R$ 199,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/WAP-FLOW-TURBO-Ventilador-Silencioso/dp/B0BT4X3MJR/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=6DQ38J3Q75KQ&dib=eyJ2IjoiMSJ9.OMXMzWrTMnDBANIunmWknAPTc7rQhCRl5rC6ezUvAVNwufE6NdAsRifNteYNk-mOGAeSxkdi_jNzZIWtUKwRcGR262QmsWUI17nr6GyyciGf2svjBfZbRywm-RSCUp65LrztfZdxdimMA_OFdAkntt4p8WiGmiJmHfdJZfaGmFsJb3Q6Dt5zrvgaJgKOuBTNrjYpAZbQnOqVS3038-liJ8fmS9mXqyPTgvcHBbAij28JFM6Xm1Z_KxsXvvWnEjXY.ZRzWePwfOWwvWd5hUqMsLo2qSKvL_DEZpdKTKDCD75k&dib_tag=se&keywords=ventilador%2Bcoluna&qid=1778336736&sprefix=ventilador%2Bcolun%2Cspecialty-aps%2C296&sr=8-1&srs=204661989011&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/cochãocasal.png" alt="">
-        <div class="nome">Colchão Casal Emma</div>
-        <div class="valor">R$ 1099,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/RackSuspenso.png" alt="">
-        <div class="nome">Rack Suspenso P/TV PRETO</div>
-        <div class="valor">R$ 325,50</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-      </div>
-      
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/SapateiraVertica.png" alt="">
-        <div class="nome">Sapateira Vertical com Portas</div>
-        <div class="valor">R$ 209,90</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://shopee.com.br/Sapateira-Vertical-com-Portas-Organizadoras-Arm%C3%A1rio-Multiuso-Decorativo-Sala-Quarto-e-Hall-Entrada-i.579103110.58250576005?extraParams=%7B%22display_model_id%22%3A139836854492%2C%22model_selection_logic%22%3A3%7D&sp_atk=8c94655d-3164-41d5-9ebc-b9695684f0c0&xptdk=8c94655d-3164-41d5-9ebc-b9695684f0c0" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/jogodetalheres.png" alt="">
-        <div class="nome">Jogo de Talheres</div>
-        <div class="valor">R$ 109,80</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Faqueiro-Siena-Brinox-5109-102/dp/B01N2WHQBQ/ref=sr_1_17?dib=eyJ2IjoiMSJ9.cLCbmUFZ4ggUIUS85LIGoHP-OyxjxJVtu3OPiJ3pdLfvhpSrKBa0K_wpUW1VSyosLiyyvOyBgM6AZNI94ZHCDwE2zZdDkO7zLWzHHz4boDfoVTGuvLK2ivwavyQ4XRDI7DFc6NySwOiCNM9jd9OXqT1rxq-VT6lMvE60XZWAhTkXDQ3WtCLV_5ZRAj4qbQRlrtjUnAve79AXMCddMpbvfbIevVMK0hOyvRVHqqsTQl9zxt4ISJ_KrOMpEVLGRGJefwLrnYLUJ-XAuAJaHndAQVzoSGs2jN9PDB0vQRVLQjA.HoTkW8qI2I_86GRO3gqXePZiRqJ8FXN_Fv_JZ-jdytk&dib_tag=se&keywords=jogo%2Bde%2Btalheres&qid=1778373143&sr=8-17&ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/ConjuntoXícaras.png" alt="">
-        <div class="nome">Conjunto de 6 Xícaras</div>
-        <div class="valor">R$ 109,80</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Conjunto-X%C3%ADcaras-grandes-pires-Maresias/dp/B09418KWFJ/ref=sr_1_9?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=364TNBN5V4H96&dib=eyJ2IjoiMSJ9.WF6yBhM-qX5HtYvVyduPJ9ayYkGJnOLPXQ-FR_79fw3mhwj0UqJBZeHcuNK23Amt_-RSPQUSZjgd1wb4g1YE3_qw-Jj2ZR9As1rmXpU9iugviDirZHUR2YfSLeFHKMlSWDmAehBNlhXDm46ntRz8mayOdES-Kvo5Usjpk0SvpMRai05_oWkahA2QhubRylGTdrxh3d9N7mssoNQfmlq8-QpUMfewWhPO2jGyMqpClcxiITGYSa_dKO6AJRZH9xq262NOo4njf8x5CsahhMcKFIgMMkGPZ0ywQVZqfaYv848.3R5RpliqD888Qj99tAKwnXaafsvt95sXc4VX2k79TQ4&dib_tag=se&keywords=jogo+xicara&qid=1778373610&sprefix=jogo+xicar%2Caps%2C281&sr=8-9&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12" class="btn">Comprar</a>
-      </div>
-      
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/MixerVerticalTurbo.png" alt="">
-        <div class="nome">Mixer Vertical Turbo Preto 110V</div>
-        <div class="valor">R$ 116,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Mixer-Power-Inox-Elgin-Lunar/dp/B09VQ39F41/ref=sr_1_5?crid=2EVJMS482GG9Y&dib=eyJ2IjoiMSJ9.eeph76mxGZZ2lJWMWYFqycvYj9dgAUJ6Ym4D9oqZLj0UGehlSYTaWtP9aUiLo4z2g4oGTjnar9rcZ7GCDxLk42BkU12s-NPdnphXNknm0MlqbEtbcOcut2mAp6eU_fLbIImfom2F2-1_afWmv-7H9FQZy_YsxRmhYtc660yav1wd-PAnV8HbUfiQtDTHJGdYdzP9pn0oGoaCGM2XTOyYf9vj8KdHbasDSXGNuTiEV2KwSUqHmYgpr-MkuZdDWnyuZl9XYEPH7pUmGDl9kwnWGWLB78MT7mnFmFn14x16Me0.U7EZjVtxaUsvFbSwV2YzcslNSacjpiDbpR8aHiCYzyY&dib_tag=se&keywords=mixer%2B3%2Bem%2B1&qid=1778374433&sprefix=mix%2Caps%2C213&sr=8-5&ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d&th=1" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/Kitchurrasco.png" alt="">
-        <div class="nome">Jogo de Churrasco</div>
-        <div class="valor">R$ 74,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/Para-Churrasco-Tramontina-22399-Madeira/dp/B07GS3MLJX/ref=sr_1_5?crid=1AYPK90Q3TN82&dib=eyJ2IjoiMSJ9.LZN7vx7PIo-yTOPvWb91Dn6J_xa7qCsLLdkSnK3AXHz3K8AAMEUwCLq3VdVMVVShNAapujcypDYR-jUOGANwY2Aur6HLbRdaK6Rc1wzntwazaWH5d7rnxpZdm96QUpLSJ4ZXgFjjIMoQmRKd9pvGjYR0eyALOQAM_vxlqY1joh8oMHQUx8oEPkKxCr18BkvdMTkGD426qqmz2F7Mc5ha19LIL_K3xbQVY5ZFdFXbhHH13j6CkpxxkVkcMrX4ITB30lvinyFIaIs1jpZvdz9nj86WGiZCZkrjWfVE_-Qdd0o.p06A8MrrlQQ62qd6kJjy4Q-fo3ylc7gWtjyEa0KirP4&dib_tag=se&keywords=kit+de+churrasco+tramontina&qid=1778374787&sprefix=kit+de+churrasco+%2Caps%2C268&sr=8-5" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/ConjuntoAssadeiraMarinex.png" alt="">
-        <div class="nome">Conjunto Assadeira Marinex</div>
-        <div class="valor">R$ 133,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://shopee.com.br/Conjunto-Assadeira-Marinex-1576-com-Tampa-Cinza-6-Pe%C3%A7as-i.822103155.19797683901?extraParams=%7B%22display_model_id%22%3A139828542481%2C%22model_selection_logic%22%3A3%7D&sp_atk=95a19763-381f-4393-9a4e-c3c09cfb2b12&xptdk=95a19763-381f-4393-9a4e-c3c09cfb2b12" class="btn">Comprar</a>
-      </div>
-
-      <!-- ITEM -->
-      <div class="card">
-        <img src="img/TvTCL.png" alt="">
-        <div class="nome">Smart TV TCL 50 Polegadas</div>
-        <div class="valor">R$ 2087,00</div>
-        <div class="pix">PIX: 175.177.817-74</div>
-        <a href="https://www.amazon.com.br/TCL-Polegadas-Bluetooth-Google-50P7K/dp/B0F1H26GFQ/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=16RWXXVFAOKRW&dib=eyJ2IjoiMSJ9.-vVFIhkpoBp8Txq3DOlJteDz_c-zukJJSfkzHtmI_qCWAyXPVRPoLImYXbVofJe4JA5Cdta0h0pR8KHG3aeeo2UcYakovWDSp8xevMTzAqtCzaxEmod0qWHL7yzabXCXeSnnWonXFgIboNMf8mZK3TQYqJ5OJluJ4UduFRf_xdOsYGqFBB4tjY6o4ag6F8iuPdJ2m6jZIzNvloJoImgON0tDxenHzLeapx1P0CYQ2ovoq5cmwgDCzXK9JQuBka-PcfkbJLVFcl5XTcVq8NF8IMA7zoIcXe__hhiX4Tu8QO4.suxfCqzsJbq4oBtiKW1BS658SnQNs40LgTjHHbbpNjs&dib_tag=se&keywords=Smart+TV+QLED+4K+Google+TV+TCL&qid=1778630535&sprefix=smart+tv+qled+4k+google+tv+tcl%2Caps%2C273&sr=8-5&ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751" class="btn">Comprar</a>
-      </div>
-      
-
-
-    </div>
-  </div>
-
-<!-- IMAGENS rodapé agradecimento -->
-  <div class="topo">
-    <img src="img/agradecimento.png" alt="agradecimento">
-    
-  </div>
-
-  <!-- SCRIPT AUTOMÁTICO -->
   <script>
-    document.querySelectorAll('.card').forEach(card => {
-      if (!card.querySelector('.btn')) {
-        const msg = document.createElement('div');
-        msg.className = 'msg-presente';
-        msg.innerHTML = 'Ganhado presencialmente.<br>Disponível Via PIX';
-        card.appendChild(msg);
-      }
-    });
+    const presentes = [
+
+  {
+    nome: "Penteadeira Ditália 4 Gavetas",
+    imagem: "img/penteadeira.png",
+    valor: "R$ 445,41",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Kit 12 Pratos Pétala",
+    imagem: "img/pratorasoefundo.png",
+    valor: "R$ 130,00",
+    link: "https://www.amazon.com.br/Pratos-P%C3%A9tala-Rasos-Fundos-Nadir/dp/B0GMFTWJ3D/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2P4SF5KSMOHFA&dib=eyJ2IjoiMSJ9.CwJXhhbTOaYusLYPDjIMgZb1GbBmzhTj70ygq3y4XFNqGC0YnqyRjmwy12JFxYkJUybuGGqvBXMs_PQWEndSiJ7MByicH_d1U4uoxVqeAXtLGjzjRYSQb5LKzkRox2eVaH6rBcPPo_Mx3VN6Wde8MmcFzJfA5U2GgTDGQUN18kaieszbNNyQio07DOUoSuMYBHnIOsA89z7WwdyAlDmiHPpNQRDUBuj3J6dfT3I5R32T9UiAuMsn8DYCRC2Rk8XcLv9N8a0iccV3dSiIPXd9akQadyUecw219qlsQI6Q9Mw.AP2JyMcvB8KttxT_7lRRhUew1VWPfFPupmsj4BVb6r4&dib_tag=se&keywords=prato+raso+e+fundo&qid=1778456737&sprefix=prato+raso+e+fund%2Caps%2C307&sr=8-5&ufe=app_do%3Aamzn1.fos.6a09f7ec-d911-4889-ad70-de8dd83c8a74",
+    brincadeira: false
+  },
+  {
+    nome: "Fundo “lua de mel sem miojo”",
+    imagem: "img/miojoluademel.png",
+    valor: "R$ 150,00",
+    link: "",
+    brincadeira: true
+  },
+  {
+    nome: "Alexa Echo Dot",
+    imagem: "img/AlexaDOt.png",
+    valor: "R$ 379,00",
+    link: "https://www.amazon.com.br/dp/B09B8XVSDP?ref=cm_sw_r_cso_wa_apan_dp_ZNE2HDJHHYT3NCN9YY2S&ref_=cm_sw_r_cso_wa_apan_dp_ZNE2HDJHHYT3NCN9YY2S&social_share=cm_sw_r_cso_wa_apan_dp_ZNE2HDJHHYT3NCN9YY2S&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Kit 2 Banquetas",
+    imagem: "img/banqueta.png",
+    valor: "R$ 599,90",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Jogo de Panelas",
+    imagem: "img/panelas.png",
+    valor: "R$ 347,26",
+    link: "https://www.amazon.com.br/Brinox-Panelas-Antiaderente-Ceramic-Indu%C3%A7%C3%A3o/dp/B0DDZJ18T2/ref=sr_1_4?crid=3H750I8LQASXN&dib=eyJ2IjoiMSJ9.Kp7Vr7AJ8OhBFZPERsQG5gEibtg48QyQNyX7eThZXJHj_We5-1QGeofZKLoNCdK_Y73m8Q6o8Ch8DO27BweSGglyyIY5a0rd86DtdV64Kc51iFWCM0-8cn8k1AcH201h4-46j5htj_z2gp4m2JdacE1CFvSIIbGbKS2-CuAAbtyzhdjT2Jd6JcBnni-ELdMixfOrD9SPt9DCKN-X9VaNy8xE7eWeybCB0bohbGrIMu0.9XvfjnvNmfG0CQpbVW3r73miT9FC939VhuOuh6qTyuU&dib_tag=se&keywords=jogo+de+panela+ceramica&qid=1777681576&s=kitchen&sprefix=jogo+de+panela+%2Ckitchen%2C204&sr=1-4&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678",
+    brincadeira: false
+  },
+  {
+    nome: "Penteado da noiva",
+    imagem: "img/Penteadodanoiva.png",
+    valor: "R$ 539,99",
+    link: "",
+    brincadeira: true
+  },
+  {
+    nome: "Reserva de emergência para TPM da noiva",
+    imagem: "img/ReservaTPMdanoiva.png",
+    valor: "R$ 200,00",
+    link: "",
+    brincadeira: true
+  },
+  {
+    nome: "Cama Box Baú Casal",
+    imagem: "img/camabau.png",
+    valor: "R$ 918,00",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Assadeiras de Alumínio",
+    imagem: "img/forma.png",
+    valor: "R$ 156,00",
+    link: "https://www.amazon.com.br/Assadeiras-Alum%C3%ADnio-Revestimento-Antiaderente-Tramontina/dp/B008R7SQ40/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3DSPG0M9XVCRL&dib=eyJ2IjoiMSJ9.UlRVe5cn1xJV-EUNqagE4OSIt2nTkSA9KkgU_-e1sEUFNavxVaB6WPQP-_jj9N1KVP2CoXywFjoBX_2PeaVoK1qha4z4nX8eTtu8IdTS-lxDBhkalUMKmoHR2L99oCsSJR3aaWLOaOUuz5lIoN8iPVzaMFTPOuwcKCiHYZxCYTC61hQkLt12KL9sNnHKObxrFy_9BhLfjF-i-UtaJ05zGyVZdzQqJBEnKoQr853n1FI.0S6PnRxujIZrUSAxxBxJmp73dqNWf_qIDEXZHcUsn_8&dib_tag=se&keywords=Assadeira&qid=1777683706&s=kitchen&sprefix=assadeira%2Ckitchen%2C234&sr=1-4&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12",
+    brincadeira: false
+  },
+  {
+    nome: "Roupeiro Eliza Cinamono ACP",
+    imagem: "img/RopeiroEliza.png",
+    valor: "R$ 1820,00",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Primeiro gás da casa nova",
+    imagem: "img/Primeirogás.png",
+    valor: "R$ 130,00",
+    link: "",
+    brincadeira: true
+  },
+  {
+    nome: "Pano de Prato",
+    imagem: "img/panodeprato.png",
+    valor: "R$ 91,90",
+    link: "https://shopee.com.br/product/1309294075/22498289182?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkWHlFU0hvQlZFVENpb1FnT09uNDlDS3pXUVN4ZkgrdkhaTE5lek8zWlozcmptZEc3OXhWU3ZLUlRlekc2YUp1Ymd1TWJINmZRbllLZTR2TEI5MEpMbWFJcTF4MXhQMWNiVUdQT3NIMTF2QlBlMXBDbjRmOGFYZjM5dG9YanNCNTF3PT0&gad_source=4&gad_campaignid=20828771740&gbraid=0AAAAACoEtRkAChy6Kf8KKK9ysV4XNOlzy&gclid=Cj0KCQjwo63HBhCKARIsAHOHV_UIA__79eLehwUk4Od4K0Ifo3VY6C_9I_F1_haOYX4dSK9GScB5f9QaAn_TEALw_wcB",
+    brincadeira: false
+  },
+  {
+    nome: "Lixeira 60L Preta",
+    imagem: "img/lixeira.png",
+    valor: "R$ 109,00",
+    link: "https://www.amazon.com.br/LIXEIRA-60LTS-PRETA-PEDAL-CLICK/dp/B09YDLC69D/ref=sr_1_34?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2PET2WLX4A88P&dib=eyJ2IjoiMSJ9.TAhHQJ6dcky070P8CSE4evLHyi1Iyno8mZct-3yUH-8y9el4urgzb9b1Ov3qRsKBQhYiNhdIphxnjYQwEg6C2kQY6Mx86DsEVjpYtx1jK-RXj0X83Dw2av4uc4Aismd1kNHj30b5b7cW8eL_HBWcgQA6G7fHqQt7bl7F6iZP256n8rK6nr6l9OvJzJ7BXjNa1okU9ZEoVynQw5M5qvsOtEVKf08C1qImNgaO6QmEh8Hq7544-_ex2aHO9i19C5XdLSTautBgk0yBilMTB910QNr8Ijep9aXhKEf2ZifeoOM.lC8Tby1V4G75jReDFxkERqayLD7C9_VvxU0nGSEwgCw&dib_tag=se&keywords=lixeira&qid=1777684737&sprefix=lixeira%2Caps%2C209&sr=8-34&ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d",
+    brincadeira: false
+  },
+  {
+    nome: "Churrasqueira a Gas",
+    imagem: "img/churrasqueiragas.png",
+    valor: "R$ 1034,10",
+    link: "https://www.amazon.com.br/dp/B077JCW4BQ?ref=cm_sw_r_cso_wa_apan_dp_JQ8WK9D61FJ8FH1461GP&ref_=cm_sw_r_cso_wa_apan_dp_JQ8WK9D61FJ8FH1461GP&social_share=cm_sw_r_cso_wa_apan_dp_JQ8WK9D61FJ8FH1461GP",
+    brincadeira: false
+  },
+  {
+    nome: "Britânia SANDUICHEIRA E GRILL",
+    imagem: "img/SANDUICHEIRAGRILL.png",
+    valor: "R$ 109,00",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Sofá 2 Lugares Reclinável",
+    imagem: "img/Sofá2Lugares.png",
+    valor: "R$ 979,00",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Edredom Duplo Bege",
+    imagem: "img/Edredom.png",
+    valor: "R$ 229,00",
+    link: "https://www.amazon.com.br/Edredom-Ecopluma-Toque-Branco-Camesa/dp/B0D51K3RV1/ref=sr_1_5?crid=2YTK082JEXRTI&dib=eyJ2IjoiMSJ9.NN23ywN-6g7m5vaisnT1R4GgT9Lv0UZ79VEHS6yr0zNn5nZ5VFSpaamEdC4ex5pyaTFlpO8JRMNKbI46yy8kUPfEqSRBfjKZ6rkLom2mOFa9GydcOWmwqrvhUgDuNcG9G9HAl1jQL6a7vIKLbx_Bn6hk1_IRFS-KAO5uFv21l_gMkYgNRec-xxRmnVozhZdDiJtt02ZvPU_p_8ylWvttfWEO1cC7lO3NZOE_M5cGi0fI8_AJSBXbecaJCwpGyqQpF73djal_SaTBFY9y6RSdVYhAfHajeQHzt0l8U9weI1E.yn4Vt0v3Q4OqPsncbPcKh0tztopnSDlQ3zTujWVdrx4&dib_tag=se&keywords=edredom%2Bcasal&qid=1778027547&sprefix=edredom%2Caps%2C312&sr=8-5&ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Roupeiro Lorena Cinamono ACP",
+    imagem: "img/RopeiroLorena.png",
+    valor: "R$ 1200,00",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Jogo Toalha de Banho",
+    imagem: "img/JogoToalhadeBanho.png",
+    valor: "R$ 99,90",
+    link: "https://shopee.com.br/Jogo-Toalha-de-Banho-4-Pe%C3%A7as-100-Algod%C3%A3o-Grossa-Felpuda-Super-Macia-Excelente-Absor%C3%A7%C3%A3o-New-Premier-Habitat-i.322387387.19399663917?sp_atk=f0f2de47-984c-4912-8486-2206076aa92c&xptdk=f0f2de47-984c-4912-8486-2206076aa92c",
+    brincadeira: false
+  },
+  {
+    nome: "Spa relaxante pré-casamento",
+    imagem: "img/Sparelaxante.png",
+    valor: "R$ 639,90",
+    link: "",
+    brincadeira: true
+  },
+  {
+    nome: "Sofá 3 Lugares Retrátil",
+    imagem: "img/Sofá3lugares.png",
+    valor: "R$ 1311,28",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Smart TV TCL 55 Polegadas",
+    imagem: "img/TvTCL55.png",
+    valor: "R$ 2319,00",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "6 Cadeiras Allegra",
+    imagem: "img/6CadeirasAllegra.png",
+    valor: "R$ 473,55",
+    link: "https://shopee.com.br/Kit-6-Cadeiras-Allegra-Jantar-Restaurante-Bar-Igreja-Area-Gourmet-Super-Refor%C3%A7ada-Premium-i.391672269.58257882564?extraParams=%7B%22display_model_id%22%3A189187609213%2C%22model_selection_logic%22%3A3%7D&sp_atk=5988fe16-0d94-404c-b68d-8333d622d63f&xptdk=5988fe16-0d94-404c-b68d-8333d622d63f",
+    brincadeira: false
+  },
+  {
+    nome: "Geladeira Electrolux 400l",
+    imagem: "img/GeladeiraElectrolux.png",
+    valor: "R$ 4079,00",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Fogão 5 bocas Dako",
+    imagem: "img/FogãoDako.png",
+    valor: "R$ 1729,90",
+    link: "",
+    brincadeira: false
+  },
+  {
+    nome: "Ar Condicionado Split Elgin",
+    imagem: "img/ArCondicionadoElgin.png",
+    valor: "R$ 2755,00",
+    link: "https://www.amazon.com.br/Condicionado-Split-Elgin-Inverter-45HJFI18C2WC/dp/B0DJ9TBJW2/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2NPGKHMYTMIZL&dib=eyJ2IjoiMSJ9.RZJeXysIRnvuad59OfaAFiow7OyY4L5EA2Eh_eddTdQCIuUsMkYezTQfBhtJwo8H_McOSbtL3qZLIWw7n1NufHzyTsJyv6EVHbrETLvoisraBpcxHxH7b8xbgmMk2D-Vc9y7Rs3-RDYZgR8uq13EzUt9qfHEj_ajIzggNdXbX_UPMKyDBtxFiFFjCGIuBua8PnxZZrXKf8g7vZ-n96EIJNhfQ-1M_fXQ2EQhJs8Nf1qDh7rnL4kUFZ_78dWD8oODTPz19ZVy8UybF3x68BeEJ4V_ZiIqM6LKsLEUyAOvRd0.6UvOkQeoupQJlxgVzTEpYQFx1e1d2UAStSRbpZkTYV0&dib_tag=se&keywords=ar+condicionado+18000+btus+inverter+elgin&qid=1778102894&sprefix=ar+condicionado+18000+btus+inverter+elgi%2Caps%2C298&sr=8-5&ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751",
+    brincadeira: false
+  },
+  {
+    nome: "Maquiagem da noiva",
+    imagem: "img/Maquiagemdanoiva.png",
+    valor: "R$ 549,90",
+    link: "",
+    brincadeira: true
+  },
+  {
+    nome: "Micro-ondas 33L Philco",
+    imagem: "img/Micro-ondas33LPhilco.png",
+    valor: "R$ 652,54",
+    link: "https://www.amazon.com.br/Micro-ondas-Philco-PMO38S-Limpa-F%C3%A1cil/dp/B0D3N6ZHS1/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=C7YUBZHN5K4W&dib=eyJ2IjoiMSJ9.gwmsn2CtVzMqcVzf0lymoP3LB5YIoTV2ccuwtCaGOBl8HkP3wk853IIog9Y-nKMi7wf3HXRpIs56VkLbstgSbIu-GMjZ7zUX0bE1Nq15CJvLcNFLKcJvLj7cYRZXDqVU7nLpFUDQOmTz22qKRz3nKAo10c3A3C40TrjlNrku6rLTHEU6bBBuaw9RJnWgjDRO54fNsfTCid18WsRoX6ETHhlRAD2Yoy-2rTyrD4kJh8sYp7dMCbRU1khrqoumVcjEVUTmQXPTmNQ6uThbUA9v3AZUWYj0XFmuD4Y_Vc0KeMw.ZDyG454XjDFsyTGAHa9FWtBX9DDr3ey_PCTat16wUwE&dib_tag=se&keywords=micro-ondas+%28philco+pmo34eb%29&qid=1760792373&sprefix=micro-ondas+philco+pmo34eb+%2Caps%2C207&sr=8-2&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147",
+    brincadeira: false
+  },
+  {
+    nome: "Máquina de Lavar Electrolux 127v",
+    imagem: "img/MáquinadeLavarElectrolux.png",
+    valor: "R$ 1850,00",
+    link: "https://www.amazon.com.br/Lavadora-Electrolux-LED13-Essential-Filter/dp/B09B7X4JSZ/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=UDDYHUF3UPKD&dib=eyJ2IjoiMSJ9.6UC7UDQhjW356GkweLSZKDSJ3S-sxcb5Mbh8ot7WOVbwtN6CdTQUX9UEzVL2v5aliUXmaA6vfz0u0foR81DyRiKdTL8BVdOUVvUoXK6XIUttQmzQ1OmpYUr5bI5SYS2xTiJH7VkxtSeDoadPlAJh806Vrp8w9c4fZN-dQ-j6-no7ADSEiR2rXfD64MY4Tvk7sRGFBWXYwcI-507cL4LTEO9BB0XcMAAf7NQ2yoG6WUxIVpEvGJORycgi8_GhPtMQuMLYBhdJ4VIlJ6L8F8_h0BID1z4Ez3TnwZmILynyKSI.hCpYyvqXHwQF6s3iLSXBgFbZBiZw1gZqGB6IVEn5rws&dib_tag=se&keywords=m%C3%A1quina%2Bde%2Blavar%2Broupa%2Belectrolux%2Blac12)&qid=1760792564&sprefix=m%C3%A1quina%2Bde%2Blavar%2Broupa%2Belectrolux%2Blac12%2B%2Caps%2C266&sr=8-5&ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Conjunto de 5 Facas Grandes",
+    imagem: "img/FacasGrandes.png",
+    valor: "R$ 105,21",
+    link: "https://www.amazon.com.br/Conjunto-Faqueiro-Completo-Inoxid%C3%A1vel-LUMAI/dp/B0CT66PRNC/ref=sr_1_10?crid=2KV0LE8SNBQRS&dib=eyJ2IjoiMSJ9.azJmO6ZzooTNGuiwtGzzxolAue0pf7vQcf8KN63sB5ACNrW3VFfBtWmIUkfngnGpDkmTao6Ldz0HmPqLBBJEwCQOmynJd_h-Tf8v4u2H3DxhYGbhI0Hmo4JWL6kvXSGb2fifLqOEV_DXrdQntkhwbmGeSdNJmnBsdd139TmhLbTJKT-_e71aM5X-ON3Pr9G2v7O7LeYYJkzhcWLiVirAfr3Xt5E_5_Tw8JV_GZtFYAswbEPShal295xVD_9Le218qAQvoLlV1e9koDjlo_sz27JGsoCrr-OZXzZt95zUCUY.QF7dQnXpLYhV_4eMQA3LPilH3h9uriEkP4bCvT-ZEYA&dib_tag=se&keywords=kit%2Bde%2Bfacas&qid=1778284933&sprefix=kit%2Bde%2Bfaca%2Caps%2C237&sr=8-10&ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Air Fryer MONDIAL 12L 110v",
+    imagem: "img/Airfryermondial.png",
+    valor: "R$ 519,00",
+    link: "https://www.amazon.com.br/Fritadeira-Fryer-Forno-Litros-Mondial/dp/B0BZJDLT6Z/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1NWQXX26YT5UX&dib=eyJ2IjoiMSJ9.lqUHs3ZhjquNVlUg6BYl0rNLi5N92SD_1CXmdacS_sHTN_1pX4X8RtfyCkOJozESKcOC-GvpZH5K2pwC7lWgd7d6Brr5Tn5RyBBPaerQ-FnMuZe2d3g9tiQsVvmm4gU-wbC68E2W0KYfMyPXK5-9BN9m8ojFb4lqei1AQRpLQpGaUpH0aGvrJZksWFTyqiY7vK__dFuYSPx_1B8srXnP3QAYhmS_gq4b9NFxGNcXOOKgNp2n2Zal-HwCdEX33wMrVtmZQk11V-m5KmBWoLQxEqtZmxL1DpoCgF9N4f9Hnls.QHpVQmxwDeT_JhVbHZcTrRmUcpXFhkYRBYCCPYngB34&dib_tag=se&keywords=Air+Fryer+Mondial+Forno+Oven+AFON-12L&qid=1778103396&sprefix=air+fryer+mondial+forno+oven+afon-12l%2Caps%2C203&sr=8-5&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147",
+    brincadeira: false
+  },
+  {
+    nome: "Passadeira a Vapor MONDIAL 110v",
+    imagem: "img/MONDIALPassadeiraaVapor.png",
+    valor: "R$ 150,00",
+    link: "https://www.amazon.com.br/Passadeira-Vapor-Port%C3%A1til-Mondial-Branco/dp/B0C59NLPC2/ref=sr_1_13?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3Q55IAC6QHRG5&dib=eyJ2IjoiMSJ9.nf-GGur0MfF5oysc8bqXrTJsDttLPZT8YgvYy6Gdg_e3PMGFZHCSdx-d0I_X7CerJXKaY_JXJp3mLFildjJsUksDbF0dy5QUsR69-0Tsc2ahJgHm9Kx3X34cdC9RRzJ8lKpmiSS8acw2Frh_g88wOYfLQlwXHIfUzdQKn99bVXcjRjEg8hNPqlK31J2-WSHGpAaU1Pfb66Xdz1FkIMThxnKq_BISAYSUVNcV6yYmUpN2Z6lx8tPuxhO6ZtsyiDiP3OdHfaar9Rso43UDD-rGPcLomqD2etrcg2VYqMxlS24.eCrRKl2NDOJI3r5HssPpqEolYBwDD0j72h4w43P7mlg&dib_tag=se&keywords=ferro%2Bde%2Bpassar%2Bvapor&qid=1760792996&sprefix=ferro%2Bde%2Bpassar%2Bvapor%2Caps%2C205&sr=8-13&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Robô Aspirador KaBuM",
+    imagem: "img/RobôAspiradorKaBuM.png",
+    valor: "R$ 2250,00",
+    link: "https://www.amazon.com.br/Smart-900-Recipiente-dispensador-Autolimpante/dp/B0D79KVHFM/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=109VTVROSLI16&dib=eyJ2IjoiMSJ9.z6SM5yxmez_XrjtlqOMoxxuaPP2Q7fcOYWKwTcVD_v1ZRvS6mWepZmKe7fMV9RVu4TgiLZqkOnetxfTSpY_XgiChIkJyuL1VZaO05057lDpLYrX7QgT6Mgsa3mTEuU92-OmO5zyzRL3v36NdwY4Xiu8T0XKWunnk1BbCmgHgWT26lJxjiQ3YmmP_WwNQFCietygv7TLCVteel4GlZ_WtoR1gdjcXSYF8dY_uap5iAaE2ZyDVC1fWfxbhD4BPQiEN_RH8CN-jedzI1Cx0hGQjd5KZRkOU5f2-QuQ6caYVQkg.DuwUpVxW0wymHqX7-qoZcTvzcNngh_e5HZKJHmiYHZA&dib_tag=se&keywords=robo%2Baspirador%2Bkabum&qid=1778103752&sprefix=robo%2Baspirador%2Bkabum%2Caps%2C236&sr=8-5&ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Batedeira Planetária Oster",
+    imagem: "img/BatedeiraPlanetáriaOster.png",
+    valor: "R$ 407,00",
+    link: "https://www.amazon.com.br/Batedeira-Planet%C3%A1ria-Oster-Bowl-OBAT641/dp/B0C4CF2F67/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2TTLI6HIVCD9M&dib=eyJ2IjoiMSJ9.u8gEv6KJ4QCLPJRqApkxR79hOremsKWf9StuDarcHLtn0VCPPnWIGY2dyDgbzrd5y0oO_jEbXfdqe-TaVD08H4eJ-5GX-WhbSredxqoBKCEcSqGAhBZKiE3VnPi1do-XBOp3RInEK_MVE6FEu_I1DY_Ur9cELj_Jr4yZXmTSwyIDpWaRWCxscZX2TuIGkaYVY-ELTRqOm-qdvDXx7s9gojYCxlFUcZxefoTf_wNwkKnN0hOLLc-QqHDmjht1P-4DAELSagTgeYWJodW0x2b20Ijd901MNN1PgrxmpwDWYpM.EJoXXqy8I26467Bet7pDGJmTmcNl90BhNSP3kleW3vM&dib_tag=se&keywords=Batedeira%2BPlanet%C3%A1ria%2BOster&qid=1778103888&sprefix=batedeira%2Bplanet%C3%A1ria%2Boster%2B%2Caps%2C220&sr=8-5&ufe=app_do%3Aamzn1.fos.9e6a115c-05b9-4b96-8e1c-b1f9ce2ac1a6&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Multiprocessador Philco 127V",
+    imagem: "img/MultiprocessadorPhilco.png",
+    valor: "R$ 309,00",
+    link: "https://www.amazon.com.br/Multiprocessador-Pmp1600p-1400w-101201001-Philco/dp/B07QN1RW8K/ref=sr_1_10?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=38ZN317B9UZI4&dib=eyJ2IjoiMSJ9.-2sCNhlv9cssfLXYRuLw8E97sxIGitfJwzf-V1nQh_fQtjvB9PzrIuwRESuq56gv1XNsZJQ2lN72-eUKw7G51sc1AZdAzVGO8VW6TYD7SOk_jthuL0RxHp86-BLFOObXttnm4bdzfSuKyH9uC-ZFQ1cEwLO8tr-pBfTAc4B_qJg-7hUhK-Cuodh-wnQ6ywON_0kbCU069ifUV95JHK6nPwVuKDW2JuHm9paOoXYmcAwjF-M7X7TE5bFpEVIUp5RNVX3qBjy9sXI5XfDxQ8TUskflH6WqX-X8ZzDmBDewUZE.UsNIXTGfUJL4YrL7vCE4HVkYR_yWzynfMDeGXCrNkI0&dib_tag=se&keywords=processador&qid=1778284657&sprefix=processado%2Caps%2C294&sr=8-10&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Jogo de Cama Casal",
+    imagem: "img/jogodecama.png",
+    valor: "R$ 94,00",
+    link: "https://www.amazon.com.br/Percal-Palito-Anti%C3%A1caro-N%C3%A3o-bolinha/dp/B0CVQX2DR8/ref=cs_sr_dp_2?crid=210ELACUQV25J&dib=eyJ2IjoiMSJ9.uVH2VvKtSREUwkHqI3xoZXzzrLlQ8QBzjPwKeAxTQGMCsuBbY3pg9Of3Dnj5lZN1ho_kdH2CT5BwSFxXuWhUgS5QzXdDtpp0fY4Sc4l7vWUYozU6Gx0zuES6dcecUwI59KNOCWt7XcokzUtghpt1FV1qQ22Whfj7ROCfYDB6gShHiwkqSlUF79g4nocZk0ZA5ah7eAVYi1AlRxTxSUWJ6jD4xMz81SOUwuZSXaJeOAFxcW0NLOSouY1fe9RyAzs_5tm_itkRmHsZeCor0OOOepXv0XLAyjwHviYHFYGbA9w.GBjKl1-BtiJAE7oa6qVGJv7jZsu8raJw4ABy_VrLlUM&dib_tag=se&keywords=roupa%2Bde%2Bcamacasal&qid=1778285166&sprefix=roupa%2Bde%2Bcamacas%2Caps%2C271&sr=8-15&ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Mop Giratório Inox",
+    imagem: "img/MopGiratório.png",
+    valor: "R$ 169,90",
+    link: "https://www.amazon.com.br/Perfect-Pro-Girat%C3%B3rio-Move-Cinza/dp/B089KSY62M/ref=sr_1_14?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1JQTT5SCTAZH9&dib=eyJ2IjoiMSJ9.MpPxsHlxUZ5PHT2PaVAoDzJfMLmXJQNOjurot654KEgeK09CIuE25r8vkwsGR27YECSM85I24H_yhrOjaywqwxIdQGaqxpeioSjjHMzxzwvU0QLxvQy1bar7HYMjmvDPbw7INaKjtX3i53cQX_6Yk-6vfjlUa7W1WhymFrMIBK147S3ZmKF_F8BbKFWf2-RpLHMFBawcIdL6fVAWvToRUANqIGW5kGgC2jAnP5bQ1_zpzgm9VeMTEIMekRmA5X7kS0wmPGLZ8v_DMaILXaOlbewptPBxo-fQIJoaw3lhX0U.sOnpvu6zJbJEVrPEfobL2OW1svCmNJCoQXvPcAv2jXk&dib_tag=se&keywords=esfreg%C3%A3o&qid=1778285459&sprefix=esfreg%C3%A3%2Caps%2C242&sr=8-14&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12",
+    brincadeira: false
+  },
+  {
+    nome: "Conjunto 10 Potes Vidro 640ml",
+    imagem: "img/PotesVidro.png",
+    valor: "R$ 108,00",
+    link: "https://www.amazon.com.br/Potes-Vidro-Herm%C3%A9tico-Marmita-Microondas/dp/B07QJXQHQ3/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1QDX0M8G77LQ2&dib=eyJ2IjoiMSJ9.2bA5X_6apEDPQgDDGcQPXZ6NxPB76-rcq_zIKgde7_gD5SaGnvPHnxqzXCTBFOZ_Hql32L1MWjvpobFG878_97hOkOvaULl-pLizKvAQaI4mplDpcb3SaOqgwqonETZGsOaGI88nSuDBJJuVC-c32BiWT_g69kPYS7XLk2Vc-FNdWO02EDFM4dsm_eqbAHm7x82syNotXNAHIO0Dm2wKdiQzCVk50FkdDQ3UGAT6Dw--8EazzhnfBcEbyoYGnjl_5Yu0_RzvsvV2E0zCWc_lGwiw9TR_lua7f92vDSHYP_s.ytWAAj18Y5UBRCaj_PkBuPp91YWraFiWso8-9GANifc&dib_tag=se&keywords=kit+marmita+de+vidro+10&qid=1778285842&sprefix=kit+marmita+de+vidro+1%2Caps%2C297&sr=8-5",
+    brincadeira: false
+  },
+  {
+    nome: "Conjunto 10 Potes Vidro 320ml",
+    imagem: "img/PotesVidro320ml.png",
+    valor: "R$ 102,00",
+    link: "https://www.amazon.com.br/Potes-Vidro-Herm%C3%A9tica-Quadrado-Marmita/dp/B07QL3F7CB/ref=sr_1_9?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1YXWIMY11BGLK&dib=eyJ2IjoiMSJ9.8UiQ4OgTiJtK2YkG0wvsMbWKpmCEX1q0H4wI-lDJdftpguFWIL8hyhDZbelZHwyP0y6Clps4slLJqg86O1f7gKibTxxyfgpK0Q4u18leqrHSJRlsVF9q7FZllvlZv4Pt8d5eZWNu3YIwNduesezHdIjRodoiCcbkdu8M0e05lDmHfLVzSEwtwDuexEibORxclbaDpBNzPLbwtnmgDKWC2kl0U8Pb7kxwmlPUrIKphGnx6qLMq1p6yjc4JbvGwMtsuJVsF0UQjCZs_eFZ2LMbxcCBBZlWNutiXBBTETyvloE.Q322WUtxxPDilolBexARk43utluO1XpTDI_gvauZokY&dib_tag=se&keywords=kit+marmita+de+vidro+10+320ml&qid=1778285966&sprefix=kit+marmita+de+vidro+10+320ml%2Caps%2C282&sr=8-9&ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e",
+    brincadeira: false
+  },
+  {
+    nome: "Escorredores de Louça",
+    imagem: "img/EscorredoresdeLouça.png",
+    valor: "R$ 135,40",
+    link: "https://www.amazon.com.br/Escorredor-Autom%C3%A1tica-Antiferrugem-Antiderrapante-KLEMING/dp/B0DF4JWYYR/ref=sxin_13_pa_sp_search_thematic_sspa?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&content-id=amzn1.sym.31f7e9c0-6409-440c-8b4f-5a95ecd40cab%3Aamzn1.sym.31f7e9c0-6409-440c-8b4f-5a95ecd40cab&crid=2H74ECIFCMOUN&cv_ct_cx=secador+de+prato&keywords=secador+de+prato&pd_rd_i=B0DF4JWYYR&pd_rd_r=e9c6f626-73b0-41ff-8c43-638e0388cc53&pd_rd_w=8wVQE&pd_rd_wg=rK2Yt&pf_rd_p=31f7e9c0-6409-440c-8b4f-5a95ecd40cab&pf_rd_r=XS6JXKQ5TE5MMT0QFEDR&qid=1778286319&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=secador+de+prat%2Caps%2C222&sr=1-1-fc613efb-89a5-4ecc-a266-4feb7aba5db9-spons&ufe=app_do%3Aamzn1.fos.6a09f7ec-d911-4889-ad70-de8dd83c8a74&aref=j7pjLaKgdy&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&psc=1",
+    brincadeira: false
+  },
+  {
+    nome: "Purificador de Água Gelada Cinza",
+    imagem: "img/PurificadorÁguaGelada.png",
+    valor: "R$ 615,00",
+    link: "https://www.amazon.com.br/Purificador-Electrolux-Compacto-Cinza-Bivolt/dp/B08X66RQ48/ref=sr_1_3?crid=38KUZ3LBDBKCA&dib=eyJ2IjoiMSJ9.7AMgzX-gKu8YLjer3uchb5hpTUDCkg1Y3oc9A22DMSCmhLQn4l0HsaqoFXYK1hHtfZFy1g_uZNPb2gJ0BzWBTT8yRRIaXPOBdE7lHkpTz48Pa80JrkhKQ8ESFyjpVxhWspOcXjD0VNsI05oauID2XPsmXWhw3BVq8AtbgfLihnaEQ0GA8pPjHCr59dNat5HHxSzpScY9ABhw94kWAvTLFXdFygrYXlg8s3TPTfqWcXg.xMyvvDPYAemh5D8FabCRF1CdyOQ5t7owKFXjaMrt-gE&dib_tag=se&keywords=filtro%2Bde%2Bagua&qid=1778286490&s=kitchen&sprefix=filtro%2Bde%2Ckitchen%2C216&sr=1-3&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147&th=1",
+    brincadeira: false
+  },
+  {
+    nome: "Kit De Utensílios De Cozinha",
+    imagem: "img/kitutensilio.png",
+    valor: "R$ 120,00",
+    link: "https://www.amazon.com.br/Conjunto-Utens%C3%ADlios-Cozinha-Pe%C3%A7as-Silicone/dp/B07W3XTM9Y/ref=sr_1_6?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=10F3KL286AE8H&dib=eyJ2IjoiMSJ9.QYpeLchEaw9j00aMLF2jL-v-93G6VcpnsOKOkZTNN-YTOs6Fd6eUwFoeouv3ItFnkVZwGn7qHhahD1VTloN1Ko7mKExI-vAN6ZHe3WQ-vPXLUQjzbeZQ6W59g0qGT2yb4jHWzZmuaB1Hf7B9T-Ge_9JIoA_Cg9M06T0Rqkg9uMtiAbQ4JdbuwgLzid0SooL-9jr9TKzI2Oattm4NKyqKgXch9MKLbaYjDpc1lZfDZmNBkPls-mWQ8t5GH-554QfoogWv1EPUUryttlBbH84ZaoIc3Fq_ltKgZ9OZ0mMQBPY.KPUztWKZBrkoKD_H5iUs5EqNso3g7ewBR16wG1SlYJs&dib_tag=se&keywords=kit+utens%C3%ADlios+de+cozinha+de+silicone&qid=1760793752&sprefix=kit+utens%C3%ADlios+de+cozinha+de+silicone+%2Caps%2C396&sr=8-6&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9",
+    brincadeira: false
+  },
+  {
+    nome: "PIPOQUEIRA 20CM",
+    imagem: "img/PIPOQUEIRA.png",
+    valor: "R$ 114,00",
+    link: "https://www.amazon.com.br/Tramontina-PIPOQUEIRA-20CM-LORETO-VERMELHO/dp/B09W4CSX53/ref=sr_1_7?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=XEI28ZMZ5HMJ&dib=eyJ2IjoiMSJ9.YF9gDLRES1Xgbuwicsn9wS3AyQmnnCGnKk2a1k-2twthZLshJQG7DLBiDWTVCVggGjzi9GKNds-6utOQBhGcE_tBdS2GbWl8ra_AWOVZj4bPp_18xhpB74Ekl8o6UhLnY5mTUvQ92udIbnOzdrke9hZOLT4oUxp7xF8p7Mt5oc_-rTjuM4vo9GwbgIPaFfqQh9SGz4WavlLXHun3l4S3Dd61WPttqVyvLpNYhbIdkHtbrQzYoECkBno2f2nfUDou_EbGu8r0pKH6zJfaYhIZNKCRaD2YdN1f97PHc_lgHt4.sSXTmIMFnRKHdcieuxKb3_wA6DGzyZlS_AdU39Yc92g&dib_tag=se&keywords=pipoqueira&qid=1778287067&sprefix=pipoquer%2Caps%2C293&sr=8-7&ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d",
+    brincadeira: false
+  },
+  {
+    nome: "Cafeteira Elétrica Electrolux",
+    imagem: "img/CAFETEIRA.png",
+    valor: "R$ 219,00",
+    link: "https://www.amazon.com.br/Cafeteira-Electrolux-Program%C3%A1vel-Experience-ECM25/dp/B09SVPDX3G/ref=sr_1_3?crid=39SBK06FSWY33&dib=eyJ2IjoiMSJ9.Fijf6z4gh4MWEUdspKz1kgkIaMrVtyorD2kq2Cqzsm_Rov0OEjFy5lU_BTp_v0pSt78F89KGkPc_l1x2s5m2ziqjsz1sb_W2AUVP7FiDI7WfhS-xJ6-0p2DLhN4TTHAqAEmFNmuW_bHehBoNRoVoLO6PMQD9jH8UwypAhOGx9MWSk_DtBFMM2M90NJoNxKFcv_VQOLIIy82rSconAJgh4CXMZJI8gQaNFmVoSzkDWhw.qVBfg5lNktYwkvRGZM-OFZ9p_72OsdGtiYX8n8X75AY&dib_tag=se&keywords=cafeteira%2Beletrica%2Bprogramavel&qid=1778288902&s=kitchen&sprefix=cafeteira%2Beletrica%2Ckitchen%2C208&sr=1-3&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678",
+    brincadeira: false
+  },
+  {
+    nome: "Panificadora Britânia",
+    imagem: "img/PANIFICADORA.png",
+    valor: "R$ 534,00",
+    link: "https://www.amazon.com.br/Panificadora-Multipane-Britnia-64301014-Preto/dp/B076XWM3RH/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=AXZJXEBTF5CN&dib=eyJ2IjoiMSJ9.bCSQG1I7eT1Ya6uBH-eFWEcGBk_b_hTbVqhLL5Riurz5dEEj3RcR6CaOgN2uSl-feN6YHzZL3y6a_KcmS3I6MueRG9U__kl-Y9WhzFnnVvSOUd2gNcxnJ0ebFhKynPbuY3pfP1qiHf-lB2KzOflY73Dl6ti0iN2ATZt5uooMcsj8pF8lUfwc5P32AA9tkFJ9KxMcqFKl7kwbUX8-mvFNgN5YtbaoLMk4WvYMxaRVY5w.2CsFt1MhuKolBj0kkoSID7Am7wYTJoCAAhmKcIVRXMI&dib_tag=se&keywords=panificadora+programavel&qid=1778288938&s=kitchen&sprefix=panificador+programavel%2Ckitchen%2C200&sr=1-1&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147",
+    brincadeira: false
+  },
+  {
+    nome: "Ventilador de Coluna Wap 127V",
+    imagem: "img/VentiladorColuna.png",
+    valor: "R$ 199,00",
+    link: "https://www.amazon.com.br/WAP-FLOW-TURBO-Ventilador-Silencioso/dp/B0BT4X3MJR/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=6DQ38J3Q75KQ&dib=eyJ2IjoiMSJ9.OMXMzWrTMnDBANIunmWknAPTc7rQhCRl5rC6ezUvAVNwufE6NdAsRifNteYNk-mOGAeSxkdi_jNzZIWtUKwRcGR262QmsWUI17nr6G",
+    brincadeira: false
+  }
+
+      
+
+    ];
+
+    function gerarCards() {
+    const container = document.getElementById("lista-presentes");
+    const chavePix = "175.177.817-74";
+
+    container.innerHTML = presentes.map(item => {
+
+        const pix = `
+            <p class="pix">
+                <strong>Pix:</strong> ${chavePix}
+            </p>
+        `;
+
+        const mensagemPresencial = !item.brincadeira && item.link === ""
+        ? `<p class="text-success fw-bold mt-2">
+            Ganhamos presencialmente.<br>Disponível via pix
+           </p>`
+        : "";
+
+        const botaoPresentear = !item.brincadeira && item.link && item.link !== "#"
+        ? `<a href="${item.link}" target="_blank" class="btn btn-primary">
+            Presentear
+           </a>`
+        : "";
+
+        return `
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+
+                <img src="${item.imagem}" class="card-img-top" alt="${item.nome}">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">${item.nome}</h5>
+                    <p class="card-text">${item.valor}</p>
+
+                    ${pix}
+
+                    ${mensagemPresencial}
+
+                    ${botaoPresentear}
+                </div>
+
+            </div>
+        </div>
+        `;
+    }).join("");
+}
+
+gerarCards();
   </script>
 
 </body>
