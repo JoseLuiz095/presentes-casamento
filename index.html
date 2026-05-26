@@ -53,7 +53,7 @@
       width: 100%; 
       height: 180px; 
       object-fit: contain; 
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .nome {
@@ -460,6 +460,7 @@
 
     ];
 
+
     function gerarCards() {
     const container = document.getElementById("lista-presentes");
     const chavePix = "175.177.817-74";
@@ -472,10 +473,20 @@
             </p>
         `;
 
-        const mensagemPresencial = !item.brincadeira && item.link === ""
-        ? `<p class="text-success fw-bold mt-2">
-            Ganhamos presencialmente.<br>Disponível via pix
-           </p>`
+        const mensagemPresencial = item.link === ""
+        ? `
+          <p class="text-success fw-bold mt-2">
+            ${item.brincadeira 
+              ? "" 
+              : "Ganhamos presencialmente.<br>Disponível via Pix"}
+          </p>
+
+          <button 
+            class="btn btn-success"
+            onclick="copiarPixCopiaCola('${item.valor}')">
+            Copiar Pix copia e cola
+          </button>
+        `
         : "";
 
         const botaoPresentear = !item.brincadeira && item.link && item.link !== "#"
@@ -506,6 +517,87 @@
         `;
     }).join("");
 }
+
+function somenteNumeros(valor) {
+  return valor.replace(/[^\d,]/g, "").replace(",", ".");
+}
+
+function formatarCampo(id, valor) {
+  const tamanho = String(valor.length).padStart(2, "0");
+  return id + tamanho + valor;
+}
+
+function crc16(payload) {
+  let polinomio = 0x1021;
+  let resultado = 0xFFFF;
+
+  for (let i = 0; i < payload.length; i++) {
+    resultado ^= payload.charCodeAt(i) << 8;
+
+    for (let bit = 0; bit < 8; bit++) {
+      if ((resultado & 0x8000) !== 0) {
+        resultado = (resultado << 1) ^ polinomio;
+      } else {
+        resultado <<= 1;
+      }
+
+      resultado &= 0xFFFF;
+    }
+  }
+
+  return resultado.toString(16).toUpperCase().padStart(4, "0");
+}
+
+const pixBaseSemValor = "00020126330014br.gov.bcb.pix0111175177817745204000053039865802BR5916LYGIA SCHUAMBACH6009Sao Paulo62290525REC6A15E6DE1FD7A94758020463040CBB";
+
+function valorParaPix(valorTexto) {
+  return valorTexto
+    .replace("R$", "")
+    .replace(/\./g, "")
+    .replace(",", ".")
+    .trim();
+}
+
+function crc16(payload) {
+  let crc = 0xffff;
+
+  for (let i = 0; i < payload.length; i++) {
+    crc ^= payload.charCodeAt(i) << 8;
+
+    for (let j = 0; j < 8; j++) {
+      crc = crc & 0x8000 ? (crc << 1) ^ 0x1021 : crc << 1;
+      crc &= 0xffff;
+    }
+  }
+
+  return crc.toString(16).toUpperCase().padStart(4, "0");
+}
+
+function gerarPixComValor(valorTexto) {
+  const valor = valorParaPix(valorTexto);
+  const pixSemCRC = pixBaseSemValor.substring(0, pixBaseSemValor.length - 8);
+  const campoValor = "54" + valor.length.toString().padStart(2, "0") + valor;
+  const posMoeda = pixSemCRC.indexOf("5303986") + "5303986".length;
+
+  const payloadSemCRC =
+    pixSemCRC.substring(0, posMoeda) +
+    campoValor +
+    pixSemCRC.substring(posMoeda) +
+    "6304";
+
+  return payloadSemCRC + crc16(payloadSemCRC);
+}
+
+function copiarPixCopiaCola(valor) {
+  const pix = gerarPixComValor(valor);
+
+  navigator.clipboard.writeText(pix).then(() => {
+    alert(`Pix copia e cola de ${valor} copiado! Abra seu banco, escolha Pix copia e cola e cole o código.`);
+  });
+}
+
+gerarCards();
+
 
 gerarCards();
   </script>
