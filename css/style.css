@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbfff3cb;
+}
+
+.topo {
+    margin-bottom: 12px;
+}
+
+.topo img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+@media (hover: hover) {
+    .card:hover {
+        transform: scale(1.03);
+    }
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.nome {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.valor {
+    color: rgb(0, 185, 0);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.pix {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #000;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+/* NOVO - Mensagem em verde */
+.msg-presente {
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-img-top {
+    border-radius: 12px !important;
+    display: block;
+}
+
+.btn {
+    width: 100%;
+    max-width: 280px;
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.card-body {
+    padding: 14px 8px;
+}
+
+.card-title {
+    font-size: 17px;
+    min-height: 42px;
+}
+
+.card-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #198754;
+}
+
+@media (max-width: 576px) {
+    .topo img {
+        min-height: auto;
+        object-fit: contain;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .container.py-5 {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 24px;
+    }
+
+    .card {
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    .card img {
+        height: 160px;
+    }
+
+    .pix {
+        font-size: 13px;
+        word-break: break-word;
+    }
+
+    .card-title {
+        font-size: 16px;
+        min-height: auto;
+    }
+
+    .card-text {
+        font-size: 17px;
+        margin-bottom: 6px;
+    }
+
+    .card-body {
+        padding: 10px 6px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 11px 12px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 992px) {
+    .container {
+        max-width: 100%;
+        padding: 18px 32px;
+    }
+
+    #lista-presentes {
+        row-gap: 18px;
+    }
+
+    #lista-presentes>div {
+        width: 50%;
+    }
+
+    .card {
+        min-height: 100%;
+    }
+
+    .card img {
+        height: 170px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 993px) {
+    #lista-presentes>div {
+        width: 33.3333%;
+    }
+
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
