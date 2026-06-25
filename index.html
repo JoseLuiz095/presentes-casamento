@@ -157,7 +157,6 @@
           const imagem = getCampo(item, ["Imagem"]);
           const link = getCampo(item, ["Link"]);
           const valor = getCampo(item, ["Valor Unidade", "Valor"]);
-          const quantidade = getCampo(item, ["Quantidade"]) || "1";
           const status = getCampo(item, ["Status"]);
           const ativo = getCampo(item, ["Ativo"]) || "Sim";
           const brincadeira = getCampo(item, ["Brincadeira"]) || "Não";
@@ -167,7 +166,6 @@
             imagem: corrigirCaminhoImagem(imagem),
             link,
             valor,
-            quantidade,
             status,
             ativo,
             brincadeira: ehSim(brincadeira)
@@ -195,9 +193,6 @@
           ? `<p class="text-success fw-bold mt-2">Presente já ganho</p>`
           : "";
 
-        const quantidade = Number(item.quantidade || 1) > 1
-          ? `<p class="text-muted mb-1">Quantidade: ${item.quantidade}</p>`
-          : "";
 
         const deveMostrarPix = estaGanho || item.brincadeira;
 
@@ -239,7 +234,6 @@
               <h5 class="card-title">${item.nome}</h5>
 <p class="card-text">${item.valor}</p>
 
-              ${quantidade}
               ${pix}
               ${seloStatus}
 ${botaoPix}
